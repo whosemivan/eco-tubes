@@ -1,0 +1,145 @@
+.block-info {
+  background-color: #4891d3;
+  height: 100vh;
+  min-height: 950px;
+}
+
+.block-info__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 82px;
+    height: 102px;
+    top: 570px;
+    right: 10px;
+    position: absolute;
+    background-image: url("../img/straw2.svg");
+  }
+
+  &::before {
+    content: "";
+    width: 124px;
+    height: 79px;
+    top: 850px;
+    left: 10px;
+    position: absolute;
+    background-image: url("../img/straw3.svg");
+  }
+}
+
+.block-info__title {
+  @include title-mobile;
+  margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 98px;
+    height: 124px;
+    top: 800px;
+    right: 10px;
+    position: absolute;
+    background-image: url("../img/package.svg");
+  }
+}
+
+.block-info__text {
+  @include text-mobile;
+  text-align: left;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 139px;
+    height: 139px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    position: absolute;
+    background-image: url("../img/fish.svg");
+  }
+
+  &::before {
+    content: "";
+    width: 73px;
+    height: 99px;
+    top: 425px;
+    left: 10px;
+    position: absolute;
+    background-image: url("../img/bottle.svg");
+  }
+}
+
+.block-info__paragraph {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.block-info__important-text {
+  font-weight: bold;
+}
+
+
+@media (min-width: $tablet-width) {
+  .block-info__wrapper {
+    width: 768px;
+  }
+
+  .block-info__title {
+    @include title-tablet;
+    margin-bottom: 55px;
+
+    &::before {
+      content: "";
+      background-image: url("../img/straw1.svg");
+      width: 131px;
+      height: 79px;
+      position: absolute;
+      top: 541px;
+      right: 443px;
+    }
+  }
+
+  .block-info__text {
+    @include text;
+
+    &::after {
+      transform: translate(-50%, -25%);
+    }
+  }
+
+  .block-info__paragraph:first-child::before {
+    content: "";
+    background-image: url("../img/trash.svg");
+    width: 241px;
+    height: 180px;
+    top: 575px;
+    left: 105px;
+    position: absolute;
+  }
+
+  .block-info__paragraph:first-child::after {
+    content: "";
+    background-image: url("../img/trashAgain.svg");
+    width: 37px;
+    height: 45px;
+    position: absolute;
+    top: 425px;
+    right: 235px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .block-info__wrapper {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

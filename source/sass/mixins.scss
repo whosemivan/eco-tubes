@@ -1,0 +1,60 @@
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+@mixin main-title-mobile {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@mixin title-mobile {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 60px;
+}
+
+@mixin text-mobile {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@mixin title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@mixin title-tablet {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@mixin text {
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}

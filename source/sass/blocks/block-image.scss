@@ -1,0 +1,79 @@
+.block-image {
+  background-color: #2d72bc;
+  height: 470px;
+}
+
+.block-image__title {
+  @include title-mobile;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.block-image__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../img/seaweed1-mobile.svg");
+    width: 145px;
+    height: 133px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("../img/seaweed2-mobile.svg");
+    width: 130px;
+    height: 155px;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .block-image {
+    height: 800px;
+  }
+
+  .block-image__title {
+    @include title-tablet;
+  }
+
+  .block-image__wrapper {
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      background-image: url("../img/seaweed1-tablet.svg");
+      width: 415px;
+      height: 312px;
+      left: -15px;
+    }
+
+    &::before {
+      background-image: url("../img/seaweed2-tablet.svg");
+      width: 352px;
+      height: 333px;
+      right: -15px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .block-image__wrapper {
+    width: 1200px;
+  }
+
+  .block-image {
+    height: 900px;
+  }
+}
