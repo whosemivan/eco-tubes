@@ -1,6 +1,11 @@
 .block-image {
   background-color: #2d72bc;
-  height: 470px;
+  min-height: 620px;
+  position: relative;
+  background-image: url("../img/waves/wave2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .block-image__title {
@@ -14,28 +19,13 @@
   margin: 0 auto;
   height: 100%;
   position: relative;
-
-  &::after {
-    content: "";
-    background-image: url("../img/seaweed1-mobile.svg");
-    width: 145px;
-    height: 133px;
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-  }
-
-  &::before {
-    content: "";
-    background-image: url("../img/seaweed2-mobile.svg");
-    width: 130px;
-    height: 155px;
-    position: absolute;
-    bottom: 0;
-    right: 5px;
-  }
 }
 
+@media (min-width: 420px) {
+  .block-image__title {
+    padding-top: 135px;
+  }
+}
 
 @media (min-width: $tablet-width) {
   .block-image {
@@ -44,6 +34,7 @@
 
   .block-image__title {
     @include title-tablet;
+    padding-top: 210px;
   }
 
   .block-image__wrapper {
@@ -74,6 +65,10 @@
   }
 
   .block-image {
-    height: 900px;
+    min-height: 1170px;
+  }
+
+  .block-image__title {
+    padding-top: 335px;
   }
 }

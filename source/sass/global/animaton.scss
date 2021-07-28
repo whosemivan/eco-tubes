@@ -1,10 +1,26 @@
 @keyframes swimmingBubbleAnimation {
   0% {
     transform: translateY(0);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-1200%);
+    opacity: 0;
+  }
+}
+
+@keyframes trashAnimation {
+  0% {
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-40px);
+    transform: translateY(20px);
   }
 
   100% {

@@ -24,12 +24,12 @@
 }
 
 @mixin title-mobile {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: bold;
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 @mixin text-mobile {
@@ -48,7 +48,7 @@
 }
 
 @mixin title-tablet {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 30px;
 }
 
